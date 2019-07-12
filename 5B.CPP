@@ -1,46 +1,59 @@
 #include<iostream.h>
-#include<stdlib.h>
 #include<conio.h>
-class overload
+class sumoverload
 {
 public:
 int sum(int a,int b)
-{return(a+b);}
+{
+return(a+b);
+}
 int sum(int a,int b,int c)
-{return(a+b+c);}
+{
+return(a+b+c);
+}
 int sum(int a,int b,int c,int d)
-{return(a+b+c+d);}
+{
+return(a+b+c+d);
+}
 int sum(int a[],int n)
 {
 int sum=0;
 for(int i=0;i<n;i++)
-{sum=sum+a[i];}
+{
+sum=sum+a[i];
+}
 return(sum);
+}
 };
-int main()
+void main()
 {
 clrscr();
 int a,b,c,d,result;
-overload ob;
-cout<<"\n For 2 arguements";
+sumoverload ob;
+cout<<"\n\n for 2 arguments\n";
+cout<<"\n enter 2 interges\n";
 cin>>a>>b;
 result=ob.sum(a,b);
-cout<<"\nAddition="<<result;
-cout<<"\n For 3 arguements";
+cout<<"\n addition="<<result;
+cout<<"\n\n for 3  arguments\n";
+cout<<"enter 3 interges\n";
 cin>>a>>b>>c;
 result=ob.sum(a,b,c);
-cout<<"\nAddition="<<result;
-cout<<"\n For 4 arguements";
+cout<<"addition="<<result;
+cout<<"\n\n for 4 arguments\n";
+cout<<"\n enter 4 interges\n";
 cin>>a>>b>>c>>d;
 result=ob.sum(a,b,c,d);
-cout<<"\nAddition="<<result;
-cout<<"\nHow many arguements want to pass";
+cout<<"addition="<<result;
+cout<<"\n\n how  many agrument you want to enter:";
+int no;
 cin>>no;
 int num[50];
-cout<<"Enter"<<n<<"integers\n";
-for(i=0;i<n;i++)
+cout<<"enter"<<no<<"interges\n";
+for(int i=0;i<no;i++)
 cin>>num[i];
 result=ob.sum(num,no);
-cout<<"\nAddition="<<result;
+cout<<"addition="<<result;
 getch();
 }
+
